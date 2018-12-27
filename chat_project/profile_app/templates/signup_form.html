@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Signup Page</title>
+</head>
+<body>
+
+	<h1>Fill the Signup form</h1>
+	<form enctype="multipart/form-data" method='POST'>
+		{% csrf_token %}
+		{{ user_form.as_p }}
+		{{ profile_form.as_p }}
+
+		<input type="submit" value='signup'>
+
+	</form>
+
+	<p>Or <a href="{% url 'profile:signup'%}">Create an Account</a></p>
+
+</body>
+</html>
